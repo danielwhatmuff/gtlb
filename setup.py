@@ -1,5 +1,5 @@
 """
-Setup.py for g
+Setup.py for gtlb
 """
 
 from setuptools import setup, find_packages
@@ -9,11 +9,11 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 setup(
-    name='g',
+    name='gtlb',
     version='0.0.1',
     description='',
     long_description='A CLI to open Gitlab project in a browser',
-    url='https://github.com/danielwhatmuff/g',
+    url='https://github.com/danielwhatmuff/gtlb',
     author='Daniel Whatmuff',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -23,8 +23,8 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
     ],
-    keywords='git gitlab cli open repo commandline browser',
-    py_modules=["g"],
+    keywords='git gtlb gitlab cli open repo commandline browser',
+    py_modules=["gtlb"],
     install_requires=['gitpython'],
-    scripts=['bin/g'],
+    scripts=['bin/gtlb'],
 )
