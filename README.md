@@ -26,15 +26,21 @@ $ gtlb -r
 
 ### Available options as of 0.0.1
 ```
-  --home               Open the Home page (Default action)
-  -p, --pulls          Open the Pull requests page
-  -b, --branches       Open the Branches page
-  -s, --settings       Open the Settings page
-  -r, --releases       Open the Releases page
-  -t, --tags           Open the Tags page
-  -c, --collaboration  Open the Collaboration page
-  -w, --wiki           Open the Wiki
-  -i, --issues         Open the Issues page
+  -h, --help          show this help message and exit
+  --home              Open at the home page (Default action)
+  -m, --merges        Open at Merge Requests page
+  -b, --branches      Open at Branches page
+  -s, --settings      Open at Settings page
+  -r, --releases      Open at Releases page
+  -t, --tags          Open at Tags page
+  -M, --members       Open at members page
+  -w, --wiki          Open at Wiki
+  -i, --issues        Open at Issues page
+  -a, --activity      Open at Activity page
+  -I, --integrations  Open at Integrations page
+  -c, --cicd          Open at CI/CD page
+  -d, --debug         Enable debug output
+  -v, --version       Show the installed version of gtlb
 ```
 
 ## Feel free to fork/PR any contributions
