@@ -21,7 +21,7 @@ Args:
     -I --integrations  Open at Integrations page
     -c --cicd          Open at CI/CD page
     -d --debug         Enable debug output
-    -v --version       Print the installed version of g
+    -v --version       Print the installed version of gtlb
 """
 
 version_number='0.0.1'
@@ -41,7 +41,7 @@ def parse_arguments():
     PARSER.add_argument('-I', '--integrations', help="Open at Integrations page", action='store_true')
     PARSER.add_argument('-c', '--cicd', help="Open at CI/CD page", action='store_true')
     PARSER.add_argument('-d', '--debug', help="Enable debug output", action='store_true')
-    PARSER.add_argument('-v', '--version', help="Show the installed version of g", action='store_true')
+    PARSER.add_argument('-v', '--version', help="Show the installed version of gtlb", action='store_true')
     return PARSER.parse_args()
 
 
@@ -78,7 +78,7 @@ def main():
     try:
         Repo(cwd)
     except:
-        print 'Couldnt detect Git repo, are you executing g from within the right directory..?'
+        print 'Couldnt detect Git repo, are you executing gtlb from within the right directory..?'
         sys.exit(1)
 
     git_clone_path = Repo(cwd).remotes.origin.url
