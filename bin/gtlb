@@ -1,5 +1,4 @@
-#!/Users/danielwhatmuff/.pyenv/versions/3.6.1/bin/python3.6
-import json
+#!/usr/bin/env python
 import argparse
 import os
 import sys
@@ -24,7 +23,8 @@ Args:
     -v --version       Print the installed version of gtlb
 """
 
-version_number='0.0.1'
+version_number = '0.0.1'
+
 
 def parse_arguments():
     PARSER = argparse.ArgumentParser(description='Gitlab browser opener')
@@ -66,9 +66,9 @@ def main():
         print('g version: v{}'.format(version_number))
         sys.exit(0)
 
-    count = sum(i == True for i in [merges, branches, settings, releases, tags, members, wiki, issues, activity, integrations, cicd])
+    count = sum(i is True for i in [merges, branches, settings, releases, tags, members, wiki, issues, activity, integrations, cicd])
 
-    if count > 1: 
+    if count > 1:
         print('You can only specify one option')
     elif count == 0:
         home = True
@@ -77,7 +77,7 @@ def main():
 
     try:
         Repo(cwd)
-    except:
+    except Exception:
         print('Couldnt detect Git repo, are you executing gtlb from within the right directory..?')
         sys.exit(1)
 
@@ -118,8 +118,9 @@ def main():
 
     try:
         webbrowser.open_new_tab(url)
-    except:
+    except Exception:
         print('Couldnt open the browser.')
+
 
 if __name__ == "__main__":
     main()
