@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/Users/danielwhatmuff/.pyenv/versions/3.6.1/bin/python3.6
 import json
 import argparse
 import os
@@ -69,7 +69,7 @@ def main():
     count = sum(i == True for i in [merges, branches, settings, releases, tags, members, wiki, issues, activity, integrations, cicd])
 
     if count > 1: 
-        print 'You can only specify one option'
+        print('You can only specify one option')
     elif count == 0:
         home = True
 
@@ -78,7 +78,7 @@ def main():
     try:
         Repo(cwd)
     except:
-        print 'Couldnt detect Git repo, are you executing gtlb from within the right directory..?'
+        print('Couldnt detect Git repo, are you executing gtlb from within the right directory..?')
         sys.exit(1)
 
     git_clone_path = Repo(cwd).remotes.origin.url
@@ -111,15 +111,15 @@ def main():
         url = url + '/settings/ci_cd'
 
     if debug:
-        print 'Current working directory {}'.format(cwd)
-        print 'SSH clone path detected as {}'.format(git_clone_path)
-        print 'URL constructed as {}'.format(url)
-        print 'Attempting to open browser using the python webbrowser package'
+        print('Current working directory {}'.format(cwd))
+        print('SSH clone path detected as {}'.format(git_clone_path))
+        print('URL constructed as {}'.format(url))
+        print('Attempting to open browser using the python webbrowser package')
 
     try:
         webbrowser.open_new_tab(url)
     except:
-        print 'Couldnt open the browser.'
+        print('Couldnt open the browser.')
 
 if __name__ == "__main__":
     main()
