@@ -11,3 +11,6 @@ History
 +++++++++++++++++++++++
 * Added support for Python 3
 
+0.0.3
++++++++++++++++++++++++
+* Updating versions to align
