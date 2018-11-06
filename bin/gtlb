@@ -23,7 +23,7 @@ Args:
     -v --version       Print the installed version of gtlb
 """
 
-version_number = '0.0.2'
+version_number = '0.0.3'
 
 
 def parse_arguments():
