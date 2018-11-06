@@ -1,5 +1,5 @@
 # gtlb - a tool to open Gitlab projects in a browser from the command line
-![](https://gitlab.com/gitlab-com/gitlab-artwork/raw/master/logo/logo-square.png)
+![](https://raw.githubusercontent.com/danielwhatmuff/gtlb/master/img/gitlab.png)
 
 ## Overview
 * Install and execute to open a Gitlab project in your browser from the command line
