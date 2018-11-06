@@ -23,7 +23,7 @@ Args:
     -v --version       Print the installed version of gtlb
 """
 
-version_number = '0.0.1'
+version_number = '0.0.2'
 
 
 def parse_arguments():
@@ -63,7 +63,7 @@ def main():
     version = ARGS.version
 
     if version:
-        print('g version: v{}'.format(version_number))
+        print('gtlb version: v{}'.format(version_number))
         sys.exit(0)
 
     count = sum(i is True for i in [merges, branches, settings, releases, tags, members, wiki, issues, activity, integrations, cicd])
